@@ -20,7 +20,7 @@ test case3: outbound,tcp,20001,192.168.10.11 <br />
 
 
 ## Optimization:
-I encode address and port as one long number to speed up the packet check in a hashset.  <br />
+I encode address and port as one long number to reduce memory usage.  <br />
 addr:      0.0.0.1         -> 1  <br />
 port:      6000            -> 6000  <br />
 encoded:   1 *10000 + 6000 -> 16000  <br />
